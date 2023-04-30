@@ -17,7 +17,8 @@ body {
   background-color: white;
   padding: 3em;
   border-radius: 1em 1em 5em 1em;
-  min-width: 500px;
+  // min-width: 500px;
+  width: 500px;
 }
 
 ::-moz-selection {
@@ -31,44 +32,44 @@ body {
 }
 
 .input-container {
-  width: 400px;
+  max-width: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
 
-  input {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-    width: 5em;
-    height: 2em;
-    margin-right: 1em;
-    padding: 5px;
-    border: 1px solid hsl(0, 0%, 86%);
-    border-radius: 0.5em;
+input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  width: 5em;
+  height: 2em;
+  padding: 5px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 0.5em;
 
-    &.error {
-      border: 1px solid hsl(0, 100%, 67%);
-    }
+  &.error {
+    border: 1px solid hsl(0, 100%, 67%);
   }
+}
 
-  label {
-    text-transform: uppercase;
-    font-size: 0.7em;
-    letter-spacing: 0.2em;
+label {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
 
-    &.error {
-      color: hsl(0, 100%, 67%);
-    }
+  &.error {
+    color: hsl(0, 100%, 67%);
   }
 }
 
 .result-container {
-  font-size: 4em;
+  font-size: 3.5em;
   font-style: italic;
   font-weight: 800;
   line-height: 1.05em;
+  padding-bottom: 0.2em;
 
   ul {
     list-style-type: none;
@@ -89,6 +90,11 @@ body {
   font-size: 0.7em;
 }
 
+.button-container {
+  margin: 1em 0;
+  width: 100%;
+}
+
 button {
   z-index: 1;
   position: relative;
@@ -104,7 +110,7 @@ button {
   background-image: url('src/assets/images/icon-arrow.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 60%;
+  background-size: 55%;
 }
 
 button:hover {
@@ -119,4 +125,30 @@ hr {
   outline: none;
   width: 100%;
   border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    padding: 0;
+  }
+
+  .main-container {
+    margin: 0;
+    width: 312px;
+    padding: 1.3em;
+  }
+
+  .input-container {
+    max-width: none;
+    width: 100%;
+  }
+
+  input {
+    margin-right: 10px;
+    width: 4em;
+  }
+
+  button {
+    left: 40%;
+  }
 }

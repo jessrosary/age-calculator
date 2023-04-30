@@ -170,7 +170,7 @@ function App() {
           <span className='error-text'>{inputError.year}</span>
         </div>
       </div>
-      <div>
+      <div className='button-container'>
         <button onClick={() => calculateAge()}>Calculate Age</button>
         <hr />
       </div>
