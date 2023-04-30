@@ -109,16 +109,19 @@ function App() {
   };
 
   useEffect(() => {
-    console.log({ inputError, result });
-  }, [inputError, result]);
+    console.log(inputError.day, inputError.month, inputError.year);
+  }, [inputError]);
 
   return (
     <div className='main-container'>
       <div className='input-container'>
         <div>
-          <label htmlFor='day'>day</label>
+          <label className={inputError.day ? 'error' : ''} htmlFor='day'>
+            day
+          </label>
           <br></br>
           <input
+            className={inputError.day ? 'error' : ''}
             type='text'
             name='day'
             id='day'
@@ -131,9 +134,12 @@ function App() {
           <span className='error-text'>{inputError.day}</span>
         </div>
         <div>
-          <label htmlFor='day'>month</label>
+          <label className={inputError.month ? 'error' : ''} htmlFor='month'>
+            month
+          </label>
           <br></br>
           <input
+            className={inputError.month ? 'error' : ''}
             type='text'
             name='month'
             id='month'
@@ -146,9 +152,12 @@ function App() {
           <span className='error-text month'>{inputError.month}</span>
         </div>
         <div>
-          <label htmlFor='day'>year</label>
+          <label className={inputError.year ? 'error' : ''} htmlFor='year'>
+            year
+          </label>
           <br></br>
           <input
+            className={inputError.year ? 'error' : ''}
             type='text'
             name='year'
             id='year'
@@ -162,7 +171,7 @@ function App() {
         </div>
       </div>
       <div>
-        <button onClick={() => calculateAge()}>Check</button>
+        <button onClick={() => calculateAge()}>Calculate Age</button>
         <hr />
       </div>
       <div className='result-container'>
