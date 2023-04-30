@@ -1,0 +1,98 @@
+body {
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-container {
+  background-color: white;
+  padding: 3em;
+  border-radius: 1em 1em 5em 1em;
+  min-width: 500px;
+}
+
+.input-container {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  input {
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    width: 5em;
+    height: 2em;
+    margin-right: 1em;
+    padding: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 0.5em;
+  }
+
+  label {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+  }
+}
+
+.result-container {
+  font-size: 4em;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1em;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .day {
+    color: hsl(259, 100%, 65%);
+  }
+}
+
+.error-text {
+  display: block;
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+button {
+  z-index: 1;
+  position: relative;
+  left: 88%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 5em;
+  width: 5em;
+  border-radius: 5em;
+  background-color: hsl(259, 100%, 65%);
+  color: transparent;
+  background-image: url('src/assets/images/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+hr {
+  z-index: 0;
+  position: relative;
+  top: -2.5em;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
